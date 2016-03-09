@@ -9,8 +9,8 @@ import tornado.ioloop
 import tornado.autoreload
 from tornado.options import define, options, parse_command_line
 
-import routes
 import settings
+import routes
 
 logger = logging.getLogger(__name__)
 
