@@ -8,3 +8,4 @@ logger = logging.getLogger(__name__)
 class MessageHandler(web.RequestHandler):
 	def post(self):
 		logger.info('Got message %s', self.request.body)
+		self.finish('got it')
