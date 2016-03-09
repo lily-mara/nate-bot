@@ -35,6 +35,9 @@ function postMessage(botId, text, callback) {
 			callback(data);
 		});
 	});
+
+	post.write(postData);
+	post.end();
 }
 
 function tellNateHeHadAGoodPoint() {
