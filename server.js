@@ -30,7 +30,7 @@ function postMessage(botId, text, callback) {
 			data += chunk;
 		});
 
-		res.on('data', function () {
+		res.on('end', function () {
 			winston.info(data);
 			callback(data);
 		});
