@@ -9,7 +9,12 @@ logger = logging.getLogger(__name__)
 
 
 def handle_message_post(response):
-	logger.info('%s', response)
+	if response.code != 202:
+		logger.error(
+			'Error posting message! Got code %s: %s',
+			response.code,
+			response.reason,
+		)
 
 
 def post_message(text):
