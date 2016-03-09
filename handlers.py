@@ -15,9 +15,7 @@ def tell_nate_he_had_a_good_point():
 
 class MessageHandler(web.RequestHandler):
 	def post(self):
-		body = json.loads(self.request.body)
-
-		print(body)
+		body = json.loads(str(self.request.body))
 
 		if body['user_id'] in settings.NATE_ID:
 			tell_nate_he_had_a_good_point()
