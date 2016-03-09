@@ -1,0 +1,20 @@
+{
+  "name": "nate-bot",
+  "version": "0.0.0",
+  "description": "A groupme bot that reminds people to glorify Nate.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natemara/nate-bot"
+  },
+  "author": "Nate Mara <natemara@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "http": "0.0.0",
+    "winston": "^2.2.0"
+  }
+}
