@@ -17,6 +17,8 @@ class MessageHandler(web.RequestHandler):
 	def post(self):
 		body = json.loads(self.request.body)
 
+		print(body)
+
 		if body['user_id'] in settings.NATE_ID:
 			tell_nate_he_had_a_good_point()
 			logger.info('Telling Nate that he had a good point')
@@ -24,6 +26,3 @@ class MessageHandler(web.RequestHandler):
 			logger.info('Some dummy just posted.')
 
 		self.finish('ok')
-
-	def get(self):
-		logger.info('GET')
