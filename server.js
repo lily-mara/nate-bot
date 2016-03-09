@@ -1,5 +1,6 @@
 var http = require('http'),
-	winston = require('winston');
+	winston = require('winston'),
+	https = require('https');
 
 const GROUPME_TOKEN = process.env.GROUPME_TOKEN;
 const BOT_ID = process.env.BOT_ID;
@@ -22,7 +23,7 @@ function postMessage(botId, text, callback) {
 		}
 	};
 
-	var post = http.request(postOptions, function(res) {
+	var post = https.request(postOptions, function(res) {
 		var data = '';
 		res.setEncoding('utf8');
 
