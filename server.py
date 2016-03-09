@@ -9,8 +9,9 @@ import tornado.ioloop
 import tornado.autoreload
 from tornado.options import define, options, parse_command_line
 
-import settings
 import routes
+import groupme
+import settings
 
 logger = logging.getLogger(__name__)
 
@@ -30,5 +31,6 @@ if __name__ == '__main__':
 
 	application.listen(options.port)
 	logger.info('Started listening on port %s', options.port)
+	groupme.get_bot_group(settings.BOT_ID)
 
 	tornado.ioloop.IOLoop.instance().start()
