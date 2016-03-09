@@ -22,7 +22,7 @@ function postMessage(botId, text, callback) {
 		}
 	};
 
-	var post_req = http.request(post_options, function(res) {
+	var post = http.request(postOptions, function(res) {
 		var data = '';
 		res.setEncoding('utf8');
 
